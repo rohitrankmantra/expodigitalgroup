@@ -98,7 +98,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={link.href}
-                    className="block lg:text-4xl text-lg font-display font-black uppercase tracking-tighter text-white hover:text-[var(--primary)]"
+                    className="block lg:text-4xl text-lg font-black uppercase tracking-tighter text-white hover:text-[var(--primary)]"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}
