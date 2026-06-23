@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="relative border-t border-zinc-200 bg-black pt-24 pb-12 overflow-hidden"
+      className="relative border-t border-zinc-200 bg-[#000000] pt-24 pb-12 overflow-hidden"
     >
       <div className="bg-grid absolute inset-0 opacity-10 pointer-events-none" />
       <div className="bg-lines absolute inset-0 opacity-20 pointer-events-none" />

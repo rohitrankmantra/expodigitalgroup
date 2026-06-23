@@ -71,10 +71,10 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-full bg-zinc-900 text-white md:hidden"
+          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-full bg-[#000000] text-white md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {isMobileMenuOpen ? <X size={20} className="bg-white text-black rounded-full"/> : <Menu size={20} />}
         </button>
       </div>
 
@@ -87,8 +87,8 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 z-40 flex flex-col bg-white pt-24 md:hidden"
           >
-            <div className="bg-grid absolute inset-0 opacity-20" />
-            <div className="site-shell relative z-10 space-y-8">
+            <div className="bg-grid absolute bg-black inset-0" />
+            <div className="site-shell relative top-7 z-10 pb-10 bg-black space-y-8">
               {navLinks.map((link, idx) => (
                 <motion.div
                   key={link.name}
@@ -98,7 +98,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={link.href}
-                    className="block text-4xl font-display font-black uppercase tracking-tighter text-zinc-900 hover:text-[var(--primary)]"
+                    className="block lg:text-4xl text-lg font-display font-black uppercase tracking-tighter text-white hover:text-[var(--primary)]"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}
