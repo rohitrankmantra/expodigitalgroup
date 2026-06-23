@@ -88,7 +88,7 @@ const Navbar = () => {
             className="fixed inset-0 z-40 flex flex-col bg-white pt-24 md:hidden"
           >
             <div className="bg-grid absolute bg-black inset-0" />
-            <div className="site-shell relative top-2 z-10 pb-10 bg-black space-y-8">
+            <div className="site-shell relative z-10 pb-10 bg-black space-y-8">
               {navLinks.map((link, idx) => (
                 <motion.div
                   key={link.name}
