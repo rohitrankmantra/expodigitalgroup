@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import { FaWhatsapp } from "react-icons/fa";
 // Fade-up animation helper preset for section headers & cards
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -67,9 +67,9 @@ function FAQCard({ faq }) {
 export default function Home() {
   const stats = [
     { label: "Years Experience", value: "18+" },
-    { label: "Successful Projects", value: "2200+" },
-    { label: "Events & Exhibitions", value: "500+" },
-    { label: "Satisfied Clients", value: "50+" },
+    { label: "Successful Projects", value: "2000+" },
+    { label: "Events & Exhibitions", value: "1200+" },
+    { label: "Cities", value: "50+" },
   ];
 
   // Dynamically generate your 22 client logo paths from public/client-logo/
@@ -101,13 +101,13 @@ export default function Home() {
         "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      title: "EX.PO Sustainable Modular Display",
+      title: "Modular Sustainable Solution",
       type: "Eco-Friendly System",
       image:
         "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200",
     },
     {
-      title: "High-Traffic Retail Mall Activation",
+      title: "Promotions & Mall Activations",
       type: "Fast Turnkey Deployment",
       image:
         "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1200",
@@ -122,13 +122,13 @@ export default function Home() {
       badge: "Custom Production",
     },
     {
-      title: "EX.PO Sustainable Stand System",
+      title: "Modular Sustainable Stand System",
       description:
         "Our proprietary premium eco-friendly modular profiles. Engineered with zero wood and zero waste, offering over 50 dynamic combinations for repetitive multi-event use.",
       badge: "Green Modular",
     },
     {
-      title: "Retail Outlets & Mall Activations",
+      title: "Promotions & Mall Activations",
       description:
         "Eye-catching commercial kiosks and promotional brand activation zones constructed with premium fast-turnaround SEG frame and textile systems.",
       badge: "Brand Pop-Ups",
@@ -207,7 +207,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[var(--primary)]">
-              Premium Exhibition Stand Builders • UAE,USA,Oman,India,
+              Premium Exhibition Stand Builders • UAE | KSA | Oman | India,
             </p>
             <h1 className="mb-8 text-5xl font-display font-bold tracking-tight text-zinc-950 md:text-7xl lg:text-8xl">
               We Bring Your Dream{" "}
@@ -606,7 +606,27 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      <div className="fixed z-20 bottom-10 right-5 flex items-center group cursor-pointer">
+        <a
+          href="https://wa.me/971 (0) 4 000 0000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-10 right-5 flex items-center group z-50"
+        >
+          <span
+            className="mr-3 bg- text-[#ff7900] font-bold border border-[#ff7900] px-3 py-2 rounded-lg shadow-lg whitespace-nowrap
+                   opacity-0 translate-x-4
+                   transition-all duration-300
+                   group-hover:opacity-100 group-hover:translate-x-0"
+          >
+            WhatsApp
+          </span>
 
+          <div className="bg-[#FF7900] flex justify-center items-center h-15 w-15 p-5 rounded-full">
+            <FaWhatsapp className="text-3xl text-white" />
+          </div>
+        </a>
+      </div>
       <Footer />
     </main>
   );

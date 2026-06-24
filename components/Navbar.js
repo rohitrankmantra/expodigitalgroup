@@ -22,9 +22,9 @@ const Navbar = () => {
     { name: "Custom Solutions", href: "#solutions" },
     { name: "Modular Solutions", href: "#solutions" },
     // { name: "Bespoke", href: "#bespoke" },
-    { name: "EX.PO", href: "#mopo" },
+    { name: "Conference EX.PO", href: "#mopo" },
     // { name: "QuickBuild", href: "#quickbuild" },
-    { name: "Display Standrad", href: "#quickbuild" },
+    { name: "Display Stands", href: "#quickbuild" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -49,7 +49,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center space-x-10">
+        <div className="hidden md:flex items-center text-center space-x-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -62,10 +62,14 @@ const Navbar = () => {
           ))}
           <Link
             href="#contact"
-            className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-[var(--primary)] px-7 py-3 text-sm font-black uppercase tracking-tighter text-white transition-all hover:bg-[var(--primary)] hover:text-black"
+            className="group relative flex items-center justify-center overflow-hidden rounded-full bg-[var(--primary)] text-white transition-all hover:bg-[var(--primary)] hover:text-black shrink-0 whitespace-nowrap
+            /* Small size (Applies when zoomed to 125% or on smaller screens) */
+            px-4 py-2.5 text-xs gap-1.5
+            /* Large size (Restores original size ONLY on unzoomed, large desktop screens) */
+            xl:px-7 xl:py-3 xl:text-sm xl:gap-2"
           >
             <span className="relative z-10">Get Quote</span>
-            <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="relative z-10 shrink-0 transition-transform group-hover:translate-x-1 h-3.5 w-3.5 xl:h-4 xl:w-4" />
           </Link>
         </div>
 
@@ -74,7 +78,11 @@ const Navbar = () => {
           className="relative z-50 flex h-10 w-10 items-center justify-center rounded-full bg-[#000000] text-white md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X size={20} className="bg-white text-black rounded-full"/> : <Menu size={20} />}
+          {isMobileMenuOpen ? (
+            <X size={20} className="bg-white text-black rounded-full" />
+          ) : (
+            <Menu size={20} />
+          )}
         </button>
       </div>
 
