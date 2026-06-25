@@ -198,7 +198,7 @@ export default function Home() {
       <Navbar />
 
       {/* 1. Hero Section */}
-      <section className="relative overflow-hidden bg-[#EAF4E1] pt-32 pb-24 md:pt-50 md:pb-32">
+      <section className="relative overflow-hidden bg-[#EAF4E1] pt-40 pb-24 md:pt-50 md:pb-32">
         <div className="site-shell">
           <motion.div
             className="mx-auto max-w-4xl text-center"
@@ -614,7 +614,7 @@ export default function Home() {
           className="fixed bottom-10 right-5 flex items-center group z-50"
         >
           <span
-            className="mr-3 bg- text-[#ff7900] font-bold border border-[#ff7900] px-3 py-2 rounded-lg shadow-lg whitespace-nowrap
+            className="mr-3 bg- text-white bg-black font-bold px-3 py-2 rounded-lg shadow-lg whitespace-nowrap
                    opacity-0 translate-x-4
                    transition-all duration-300
                    group-hover:opacity-100 group-hover:translate-x-0 hidden lg:flex"

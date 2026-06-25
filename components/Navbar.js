@@ -121,7 +121,7 @@ const Navbar = () => {
               >
                 <Link
                   href="#contact"
-                  className="inline-flex lg:w-full items-center justify-center rounded-2xl bg-[var(--primary)] lg:py-5 py-3 px-2 lg:text-xl font-black uppercase tracking-tighter text-black"
+                  className="inline-flex lg:w-full items-center justify-center rounded-lg mb-10 lg:rounded-2xl bg-[var(--primary)] lg:py-5 py-3 px-2 lg:text-xl font-black uppercase tracking-tighter text-white"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Start Project <ArrowRight className="ml-2" />
