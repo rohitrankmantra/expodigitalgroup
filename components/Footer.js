@@ -57,10 +57,12 @@ const Footer = () => {
             <ul className="space-y-4">
               {[
                 "Custom Solutions",
-                "EX.PO Systems",
-                "Display Standrad",
-                "Mall Activations",
-                "Office Interiors",
+                // "EX.PO Systems",
+                "Modular Solutions",
+                "Conference EX.PO",
+                "Display Stands",
+                // "Mall Activations",
+                // "Office Interiors",
               ].map((item) => (
                 <li key={item}>
                   <Link
