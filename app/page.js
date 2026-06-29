@@ -172,7 +172,7 @@ export default function Home() {
         "Yes, Expo Digital Group is a complete turnkey provider. We handle everything from creative conceptual 3D design renders and in-house manufacturing at our Al Quoz compound to shipping, floor assembly, dismantling, and safe storage.",
     },
     {
-      question: "What exactly is the MO.PO Sustainable Stand System?",
+      question: "What exactly is the Modular Portable Sustainable Stand System?",
       answer:
         "MO.PO is our innovative, eco-conscious modular profiling setup. It gives you a premium, heavy custom-built appearance but generates absolutely zero waste, skips wood elements, and can be recombined into over 50 unique spatial variations for multiple exhibitions.",
     },
