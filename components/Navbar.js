@@ -47,12 +47,12 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="relative z-50 flex items-center gap-3">
           <Image
-            src="/Expo-Digital-Logo.png"
+            src="/expo-digital-logo.png"
             alt="Expo Digital Group"
             width={100}
             height={100}
             priority
-            className="lg:h-36 h-30 w-auto object-contain"
+            className="lg:h-36 h-30 w-auto object-fill"
           />
         </Link>
 
