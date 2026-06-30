@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-8">
               <Image
-                src="/logo.png"
+                src="/expo-digital-logo.png"
                 alt="Expo Digital Group"
                 width={180}
                 height={64}

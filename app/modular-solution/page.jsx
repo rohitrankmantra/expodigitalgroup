@@ -50,7 +50,7 @@ function Page() {
   const [form, setForm] = useState({ name: "", email: "" });
 
   return (
-    <div className="bg-neutral-50 text-neutral-800 min-h-screen antialiased selection:bg-blue-500 selection:text-white">
+    <div className="bg-[#EAF4E1] text-neutral-800 min-h-screen antialiased selection:bg-blue-500 selection:text-white">
       <Navbar />
 
       {/* Hero Section */}
