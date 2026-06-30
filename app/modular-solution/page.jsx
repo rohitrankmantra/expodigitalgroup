@@ -367,7 +367,7 @@ function Page() {
             </div>
             <div className="flex justify-center">
               <div className="flex justify-center items-center rounded-lg bg-[var(--primary)] py-2 w-56 cursor-pointer">
-                <button>Contact Us</button>
+                <a href="#contact"><button className="cursor-pointer">Contact Us</button></a>
               </div>
             </div>
           </div>
