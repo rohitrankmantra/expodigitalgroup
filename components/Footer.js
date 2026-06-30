@@ -42,7 +42,7 @@ const Footer = () => {
                 <a
                   key={idx}
                   href="#"
-                  className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-900 transition-all hover:bg-[var(--primary)] hover:border-[var(--primary)] hover:text-white hover:scale-110 shadow-sm"
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-zinc-200 bg-white text-[var(--primary)] transition-all hover:bg-[var(--primary)] hover:border-[var(--primary)] hover:text-white hover:scale-110 shadow-sm"
                 >
                   <Icon size={20} />
                 </a>

@@ -11,23 +11,35 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
+  // Handle scroll effect for desktop header background
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Prevents the background content from scrolling underneath the active mobile menu overlay
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
 
   const navLinks = [
     { name: "Home", href: "/" },
     {
       name: "Solutions",
       dropdown: [
-        { name: "Custom Solutions", href: "#custom-solutions" },
-        { name: "Modular Solutions", href: "#modular-solutions" },
+        { name: "Custom Solutions", href: "custom-solutions" },
+        { name: "Modular Solutions", href: "modular-solution" },
       ],
     },
     { name: "Conference EXPO", href: "#mopo" },
@@ -37,7 +49,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ${
         isScrolled
           ? "bg-[#000000] py-0 shadow-[0_10px_40px_rgba(0,0,0,0.05)] backdrop-blur-xl"
           : "bg-[#000000] py-0"
@@ -103,29 +115,51 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Toggle Button */}
         <button
           className="relative z-50 flex h-10 w-10 items-center justify-center rounded-full bg-black text-white md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
-            <X size={20} className="bg-white text-black rounded-full" />
+            <X size={20} className="text-white" />
           ) : (
             <Menu size={20} />
           )}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
-            className="fixed inset-0 z-40 bg-black pt-24 pb-20 md:hidden"
+            className="fixed inset-0 w-full h-fit z-40 bg-black md:hidden overflow-y-auto flex flex-col"
           >
-            <div className="site-shell space-y-7">
+            {/* NEW HEADER TRACK RIGHT INSIDE SCREEN TO RENDER LOGO AND CLOSE LINK ACCURATELY */}
+            <div className="site-shell flex h-36 justify-between items-center shrink-0">
+              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-3">
+                <Image
+                  src="/expo-digital-logo.png"
+                  alt="Expo Digital Group"
+                  width={100}
+                  height={100}
+                  priority
+                  className="h-30 w-auto object-fill"
+                />
+              </Link>
+              
+              <button
+                className="flex h-10 w-10 items-center justify-center rounded-full text-white"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            {/* Menu Links Body */}
+            <div className="site-shell space-y-7 pb-20 flex-1">
               {navLinks.map((link, idx) => (
                 <motion.div
                   key={link.name}
