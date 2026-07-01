@@ -110,17 +110,15 @@ export default function Page() {
         </span>
 
         <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
-          MODULAR SUSTAINABLE BOOTH SYSTEM <span className="text-[var(--primary)]">(SEG FABRIC)</span>
+          MODULAR SUSTAINABLE BOOTH SYSTEM <span className="text-[var(--primary)]"><br />(SEG FABRIC)</span>
         </h1>
 
-        <p className="text-base md:text-lg text-slate-700 leading-relaxed pb-6 border-b-2 border-[var(--primary)]">
-          Where we can transform your <strong className="text-slate-900">SMALL</strong> space into a vibrant, customized design 
+        <p className="text-base md:text-lg text-slate-700 lowercase leading-relaxed pb-6 border-b-2 border-[var(--primary)]">
+          Where we can transform your SMALL space into a vibrant, customized design 
           booth up and ready in a couple of hours. Our expert design team can 
           magically transform any space into an appealing and visually stunning 
-          execution that is guaranteed to make your brand steal the show. <br className="hidden md:inline" />
-          <span className="font-semibold text-slate-900 block mt-2">
+          execution that is guaranteed to make your brand steal the show. 
             FORGET THE BORING LOOK OF OCTONORM — THIS CAN ALSO BE USED IN YOUR SHELL SCHEME SPACE.
-          </span> 
           Through modern technology and extraordinary marketing, we help our customers develop a better 
           understanding of your brand by bringing it to life with eye-catching and majestic displays, 
           conference booths, mall activations, photo booths, backdrops, and feature walls.
