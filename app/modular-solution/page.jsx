@@ -151,7 +151,7 @@ export default function Page() {
           <div className="flex justify-center mt-10">
             <button
               onClick={loadMore}
-              className="bg-[var(--primary)] text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 active:scale-95 transition-all"
+              className="bg-[var(--primary)] text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 active:scale-95 transition-all cursor-pointer"
             >
               See More
             </button>
